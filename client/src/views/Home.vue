@@ -2,28 +2,22 @@
 import Typed from "typed.js";
 import { onMounted, ref } from "vue";
 
-const render = ref(0);
 const options = {
   strings: ["DMCE", "Committee", "Portal"],
   typeSpeed: 100,
   backSpeed: 100,
   loop: true,
 };
-console.log("rendered");
-onMounted(() => {
-  if (render.value === 0) {
-    new Typed("#typed", options);
-    render.value = 1;
-    console.log(render);
-  }
 
-  console.log("Mounted");
+onMounted(() => {
+  const typed = new Typed("#typed", options);
+  typed.start();
 });
 </script>
 <template>
   <div>
     <div
-      class="relative flex flex-col justify-center items-center h-screen text-[#fff]"
+      class="relative z-50 flex flex-col justify-center items-center h-screen text-[#fff]"
     >
       <div
         class="flex flex-col justify-center items-center text-4xl sm:text-6xl lg:text-8xl font-semibold"
