@@ -12,7 +12,7 @@ const route = useRoute();
 <template>
   <div class="w-screen bg-[#121212]">
     <Loading />
-    <Alert />
+
     <Modal />
     <Navbar class="z-50" />
     <RouterLink
@@ -29,6 +29,7 @@ const route = useRoute();
     <RouterView
       class="flex flex-col pr-5 sm:pr-10 pl-24 sm:pl-32 py-5 sm:py-10"
     />
+    <Alert />
     <Footer />
   </div>
 </template>
