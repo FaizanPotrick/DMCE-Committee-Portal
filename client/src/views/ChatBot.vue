@@ -1,8 +1,9 @@
 <script setup>
 import { ref } from "vue";
+import axios from "axios";
 const input = ref("");
 
-const Input_Chat = () => {
+const Input_Chat = async () => {
   const chat = document.getElementById("chat");
   const input_chat = `<div class="flex justify-start items-end flex-row-reverse">
         <div
@@ -12,14 +13,19 @@ const Input_Chat = () => {
         </div>
       </div>`;
 
+  chat.innerHTML += input_chat;
+  const { data } = await axios.get(
+    `https://frozen-savannah-13770.herokuapp.com/${input.value}`
+  );
+  input.value = "";
   const bot_chat = `<div class="flex justify-start items-end">
         <div
           class="p-4 max-w-sm w-full rounded-br-xl rounded-tr-xl rounded-tl-xl bg-[#fff]"
         >
-          Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
+          ${data}
         </div>
       </div>`;
-  chat.innerHTML += input_chat;
+  chat.innerHTML += bot_chat;
 };
 </script>
 <template>
@@ -32,7 +38,7 @@ const Input_Chat = () => {
         <div
           class="p-4 max-w-sm w-full rounded-br-xl rounded-tr-xl rounded-tl-xl bg-[#fff]"
         >
-          Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
+          Hi, KIWI here, How may I help you :)
         </div>
       </div>
     </div>
