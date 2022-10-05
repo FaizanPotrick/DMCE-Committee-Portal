@@ -40,4 +40,10 @@ body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
 </style>
