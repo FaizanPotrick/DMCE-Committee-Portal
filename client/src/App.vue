@@ -21,12 +21,12 @@ const route = useRoute();
     <RouterLink
       v-if="route.name !== 'chatbot'"
       to="/chatbot"
-      class="fixed right-10 bottom-10 p-3 bg-[#fff] rounded-full shadow-md shadow-[#fff]/10 z-50 border border-[#121212]"
+      class="fixed right-10 bottom-10 p-3 bg-[#fff] rounded-full shadow-md shadow-[#fff]/10 z-50 border group"
     >
       <img
         :src="ChatBot"
         alt="logo"
-        class="w-12 sm:w-[60px] h-12 sm:h-[60px] p-2 cursor-pointer duration-500 hover:scale-110"
+        class="w-12 sm:w-[60px] h-12 sm:h-[60px] p-2 cursor-pointer duration-500 group-hover:scale-110"
       />
     </RouterLink>
     <Alert />
