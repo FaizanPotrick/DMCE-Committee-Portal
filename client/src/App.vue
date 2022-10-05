@@ -14,7 +14,10 @@ const route = useRoute();
     <Loading />
 
     <Modal />
-    <Navbar class="z-50" />
+    <Navbar class="z-[51]" />
+    <RouterView
+      class="flex flex-col pr-5 sm:pr-10 pl-24 sm:pl-32 py-5 sm:py-10"
+    />
     <RouterLink
       v-if="route.name !== 'chatbot'"
       to="/chatbot"
@@ -26,9 +29,6 @@ const route = useRoute();
         class="w-12 sm:w-[60px] h-12 sm:h-[60px] p-2 cursor-pointer duration-500 hover:scale-110"
       />
     </RouterLink>
-    <RouterView
-      class="flex flex-col pr-5 sm:pr-10 pl-24 sm:pl-32 py-5 sm:py-10"
-    />
     <Alert />
     <Footer />
   </div>
