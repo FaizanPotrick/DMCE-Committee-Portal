@@ -46,6 +46,71 @@ onMounted(() => {
         Register
       </RouterLink>
     </div>
+
+    <div class="flex justify-center items-center gap-8 flex-wrap pb-4">
+      <div
+        class="box w-[250px] h-[250px] relative rounded-full duration-500 hover:scale-110 cursor-pointer"
+      >
+        <div
+          class="inset-4 border-[6px] border-[#070a1c] absolute flex flex-col justify-center items-center rounded-full"
+        >
+          <div class="font-semibold uppercase tracking-[0.2em] text-center">
+            <div class="text-2xl text-[#fff]">Faizan Potrick</div>
+            <div class="text-[#000]">Software Developer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center items-center gap-8 pt-4 flex-wrap">
+      <div
+        class="box w-[250px] h-[250px] relative rounded-full duration-500 hover:scale-110 cursor-pointer"
+      >
+        <div
+          class="inset-4 border-[6px] border-[#070a1c] absolute flex flex-col justify-center items-center rounded-full"
+        >
+          <div class="font-semibold uppercase tracking-[0.2em] text-center">
+            <div class="text-2xl text-[#fff]">
+              Aarti <br />
+              Pawar
+            </div>
+            <div class="text-[#000]">Frontend Developer</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="box w-[250px] h-[250px] relative rounded-full duration-500 hover:scale-110 cursor-pointer"
+      >
+        <div
+          class="inset-4 border-[6px] border-[#070a1c] absolute flex flex-col justify-center items-center rounded-full"
+        >
+          <div class="font-semibold uppercase tracking-[0.2em] text-center">
+            <div class="text-2xl text-[#fff]">Aditya Sangale</div>
+            <div class="text-[#000]">
+              Graphic <br />
+              Designer
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="box w-[250px] h-[250px] relative rounded-full duration-500 hover:scale-110 cursor-pointer"
+      >
+        <div
+          class="inset-4 border-[6px] border-[#070a1c] absolute flex flex-col justify-center items-center rounded-full"
+        >
+          <div class="font-semibold uppercase tracking-[0.2em] text-center">
+            <div class="text-2xl text-[#fff]">
+              Sanika <br />
+              Rane
+            </div>
+            <div class="text-[#000]">
+              ML <br />
+              Engineer
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <ul class="circles absolute top-0 left-0 w-full h-full rotate-180">
       <li></li>
       <li></li>
@@ -61,6 +126,10 @@ onMounted(() => {
   </div>
 </template>
 <style>
+.box {
+  background: linear-gradient(315deg, rgb(128, 60, 190), rgb(54, 23, 83));
+}
+
 .circles li {
   position: absolute;
   display: block;
