@@ -15,7 +15,7 @@ const Input_Chat = async () => {
 
   chat.innerHTML += input_chat;
   const { data } = await axios.get(
-    `https://frozen-savannah-13770.herokuapp.com/${input.value}`
+    `/api/chatbot/${input.value}`
   );
   input.value = "";
   const bot_chat = `<div class="flex justify-start items-end">

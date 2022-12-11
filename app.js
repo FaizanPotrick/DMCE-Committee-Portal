@@ -35,6 +35,7 @@ app.use(express.static(path.join(__dirname, "./client/dist")));
 app.use(require("./routes/User.js"));
 app.use(require("./routes/Event.js"));
 app.use(require("./routes/Contact.js"));
+app.use(require("./routes/ChatBot.js"));
 app.use(ErrorHandler);
 
 if (process.env.NODE_ENV === "production") {
