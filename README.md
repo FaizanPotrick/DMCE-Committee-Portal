@@ -43,7 +43,8 @@ Various opportunities can be availed by the students for their experience and kn
 
 ## Prerequisites
 
-
+#### Install [Node js](https://nodejs.org/en/)
+#### Install NPM Package
 ```bash
   npm install npm@latest -g
 ```
