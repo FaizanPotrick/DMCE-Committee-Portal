@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import axios from "axios";
+import UseChatbotStore from "@/stores/Chatbot";
 const input = ref("");
 
 const Input_Chat = async () => {
@@ -14,10 +14,9 @@ const Input_Chat = async () => {
       </div>`;
 
   chat.innerHTML += input_chat;
-  const { data } = await axios.get(
-    `/api/chatbot/${input.value}`
-  );
+  const message = input.value;
   input.value = "";
+  const data = await UseChatbotStore().get_response(message);
   const bot_chat = `<div class="flex justify-start items-end">
         <div
           class="p-4 max-w-sm w-full rounded-br-xl rounded-tr-xl rounded-tl-xl bg-[#fff]"
