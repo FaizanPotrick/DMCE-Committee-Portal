@@ -31,14 +31,14 @@ app.use(
     saveUninitialized: true,
   })
 );
-app.use(express.static(path.join(__dirname, "client/dist")));
+app.use(express.static(path.join(__dirname, "./client/dist")));
 app.use(require("./routes/User.js"));
 app.use(require("./routes/Event.js"));
 app.use(require("./routes/Contact.js"));
 app.use(ErrorHandler);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client/dist")));
+  app.use(express.static("./client/dist"));
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
   });
