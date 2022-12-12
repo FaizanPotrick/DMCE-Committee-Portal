@@ -26,4 +26,4 @@ const ErrorHandler = (err, req, res, next) => {
     .json({ type: "error", message: error.message || "Internal Server Error" });
 };
 
-module.exports = ErrorHandler;
+export default ErrorHandler;

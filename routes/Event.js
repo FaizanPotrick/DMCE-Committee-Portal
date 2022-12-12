@@ -1,9 +1,10 @@
-const express = require("express");
+import express from "express";
+import Event from "../schema/EventSchema.js";
+import User from "../schema/UserSchema.js";
+import jwt from "jsonwebtoken";
+import mongoose from "mongoose";
+
 const router = express.Router();
-const Event = require("../schema/EventSchema");
-const User = require("../schema/UserSchema");
-const jwt = require("jsonwebtoken");
-const mongoose = require("mongoose");
 
 router.post("/api/event/registration", async (req, res, next) => {
   const token = req.cookies.token;
@@ -69,4 +70,4 @@ router.get("/api/dashboard", async (req, res) => {
   res.status(200).json(response[0]);
 });
 
-module.exports = router;
+export default router;

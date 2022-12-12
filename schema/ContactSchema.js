@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const ContactSchema = new mongoose.Schema(
   {
@@ -35,6 +35,6 @@ const ContactSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.connection
+export default mongoose.connection
   .useDb("DMCE_Committee_Portal")
   .model("Contact", ContactSchema);

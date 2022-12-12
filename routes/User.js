@@ -1,8 +1,9 @@
-const express = require("express");
+import express from "express";
+import bcrypt from "bcrypt";
+import User from "../schema/UserSchema.js";
+import jwt from "jsonwebtoken";
+
 const router = express.Router();
-const bcrypt = require("bcrypt");
-const User = require("../schema/UserSchema");
-const jwt = require("jsonwebtoken");
 
 router.post("/api/registration", async (req, res, next) => {
   const {
@@ -108,4 +109,4 @@ router.get("/api/authentication", async (req, res) => {
   res.send(true);
 });
 
-module.exports = router;
+export default router;

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const EventSchema = new mongoose.Schema(
   {
@@ -53,6 +53,6 @@ const EventSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.connection
+export default mongoose.connection
   .useDb("DMCE_Committee_Portal")
   .model("Event", EventSchema);
