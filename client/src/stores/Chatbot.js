@@ -41,9 +41,7 @@ export default defineStore({
       return bag;
     },
     async predict_class(message) {
-      const model = await tf.loadLayersModel(
-        "https://upload-files-nine.vercel.app/api/dmce-committee-portal/model.json"
-      );
+      const model = await tf.loadLayersModel("/api/model.json");
       const predict = model.predict(tf.tensor([this.bag_of_words(message)]));
       const result = await predict.argMax(1).dataSync()[0];
       return classes[result];

@@ -41,6 +41,12 @@ app.use(express.static(path.join(process.cwd(), "./client/dist")));
 app.use(User);
 app.use(Event);
 app.use(Contact);
+app.get("/api/model.json", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "model", "model.json"));
+});
+app.get("/api/weights.bin", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "model", "weights.bin"));
+});
 app.use(ErrorHandler);
 
 if (process.env.NODE_ENV === "production") {
